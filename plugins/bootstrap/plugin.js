@@ -11,7 +11,7 @@ const bootstrap = await Deno.readTextFile(
 );
 
 export default function plugin() {
-  console.log(compiler);
+  // console.log(compiler);
   return {
     name: "bootstrap",
     render(ctx) {
