@@ -6,6 +6,10 @@ const compiler = sass([
   load_paths: ["plugins/bootstrap/"],
 });
 
+const bootstrap = await Deno.readTextFile(
+  "./plugins/bootstrap/bootstrap.css",
+);
+
 export default function plugin() {
   console.log(compiler);
   return {
@@ -13,9 +17,7 @@ export default function plugin() {
     render(ctx) {
       const scripts = [];
       const sassCompiler = compiler.to_string();
-      const bootstrap = Deno.readTextFileSync(
-        "./plugins/bootstrap/bootstrap.css",
-      );
+
       const liveSASS = sassCompiler.get("style");
       const cssText = bootstrap + "\n" + liveSASS;
       const styles = [{ cssText, id: "bootstrap" }];
