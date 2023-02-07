@@ -5,17 +5,12 @@
 /// <reference lib="deno.ns" />
 
 import { start } from "$fresh/server.ts";
-import manifest from "./fresh.gen.ts";
-
-import css from "@/plugins/css.js";
-import sass from "@/plugins/sass/mod.js";
+import manifest from "@/fresh.gen.ts";
 import bootstrap from "@/plugins/bootstrap/plugin.js";
 
 await start(manifest, {
   port: 8001,
-  //   plugins: [css(), sass()],
   plugins: [
-    sass(),
-    // bootstrap(),
+    bootstrap(),
   ],
 });

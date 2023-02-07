@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "start": "deno run -A --watch=static/,routes/,plugins/ dev.ts"
+    "start": "deno run -A --watch=static/,routes/,plugins/ dev.ts",
+    "bootstrap": "sass ./plugins/bootstrap/scss/bootstrap.scss ./plugins/bootstrap/bootstrap.css"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {

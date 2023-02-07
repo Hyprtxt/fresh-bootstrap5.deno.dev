@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Fresh App</title>
       </Head>
-      <div>
+      <div class="container">
         <img
           src="/logo.svg"
           width="128"
@@ -15,8 +15,8 @@ export default function Home() {
           alt="the fresh logo: a sliced lemon dripping with juice"
         />
         <p>
-          Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
-          file, and refresh.
+          Welcome to `fresh`. Try updating this message in the
+          ./routes/index.tsx file, and refresh.
         </p>
         <Counter start={3} />
       </div>
