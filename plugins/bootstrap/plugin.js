@@ -17,7 +17,6 @@ export default function plugin() {
     render(ctx) {
       const scripts = [];
       const sassCompiler = compiler.to_string();
-
       const liveSASS = sassCompiler.get("style");
       const cssText = bootstrap + "\n" + liveSASS;
       const styles = [{ cssText, id: "bootstrap" }];
