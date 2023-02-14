@@ -1,7 +1,7 @@
 import sass from "sass";
 
 const compiler = sass([
-  "plugins/bootstrap/style.scss",
+  "./plugins/bootstrap/style.scss",
 ], {
   load_paths: ["plugins/bootstrap/"],
 });
